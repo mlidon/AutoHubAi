@@ -1,75 +1,41 @@
-# React + TypeScript + Vite
+# AI Automation Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI Automation Hub is a lightweight platform designed to automate real business workflows using event triggers, external integrations, and AI‑powered decision making.  
+It provides a clean architecture for connecting services (email, documents, messaging tools), interpreting content with AI, and executing automated actions.
 
-Currently, two official plugins are available:
+## 🚀 Purpose
+The goal of this project is to demonstrate practical AI integration in real-world scenarios.  
+It focuses on automating repetitive tasks, improving operational efficiency, and enabling intelligent workflows that combine:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Event-based triggers  
+- AI interpretation (classification, summarization, extraction)  
+- Executable actions across external services  
+- Clear logging and workflow monitoring  
 
-## React Compiler
+## 🧩 Core Features
+- Workflow builder: “When X happens → use AI → perform Y”
+- AI-powered classification, summarization, and structured extraction
+- Integrations with external APIs (email, notes, messaging, storage)
+- Modular provider layer (OpenAI, Groq, Gemini, local models)
+- Clean backend architecture (Node.js + TypeScript)
+- Dashboard for workflow management and execution logs
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠️ Tech Stack
+- **Frontend:** React + Tailwind  
+- **Backend:** Node.js + TypeScript  
+- **Database & Auth:** Supabase (PostgreSQL)  
+- **AI Providers:** OpenAI, Groq, Gemini, Ollama (switchable)  
+- **Integrations:** Gmail, Notion, Slack, Drive (planned)
 
-Note: This will impact Vite dev & build performances.
+## 📦 Project Goals
+This project is part of a 3‑month portfolio plan focused on:
+1. AI automation  
+2. Applied AI architectures  
+3. Full‑stack engineering with clean, scalable design  
 
-## Expanding the ESLint configuration
+It is intentionally built to be extendable, provider‑agnostic, and production‑oriented.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📄 Status
+Currently in active development.  
+Documentation, architecture diagrams, and workflow examples will be added progressively.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
