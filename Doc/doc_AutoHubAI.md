@@ -1,9 +1,4 @@
 
-
-Aquí tienes la documentación lista para copiar y pegar en tu `README.md` o en tu Wiki interna.
-
----
-
 # DOCUMENTACIÓN DEL PROYECTO 1 — AI AUTOMATION HUB
 
 **Versión:** 1.0.0  
@@ -219,11 +214,7 @@ erDiagram
 | **IA** | **Adapter Pattern** (OpenAI / Groq / Ollama) | **Ventaja clave:** Podemos usar Groq (rápido/gratis) para desarrollo y OpenAI (preciso) para demo final sin cambiar código de negocio. |
 | **Integraciones** | Nango (Opcional) o Clientes OAuth2 nativos | Evita reinventar la rueda en la gestión de tokens OAuth de Gmail/Notion. |
 
----
 
-## 🚀 7. Próximos Pasos (Call to Action para Marc)
-
-Con esta documentación, ya tienes el **Blueprint** completo. Los siguientes pasos operativos para mañana mismo serían:
 
 1.  **Inicializar el Monorepo:** `pnpm create turbo@latest`.
 2.  **Configurar Supabase:** Crear proyecto y ejecutar el script SQL basado en el diagrama `erDiagram`.
